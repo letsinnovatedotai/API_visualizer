@@ -3,10 +3,13 @@ from pymongo import MongoClient
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
-from dotenv import load_dotenv
+try:
+    from dotenv import load_dotenv
 
-# Load env vars
-load_dotenv()
+    # Load env vars
+    load_dotenv()
+except Exception as e:
+    print("e is ",e)
 
 
 # returns 'light' or 'dark'
